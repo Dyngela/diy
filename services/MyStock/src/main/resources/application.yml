@@ -1,0 +1,19 @@
+server:
+  port: 8083
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: MyStock
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${spring.application.name}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+
+defaultTenant: secondary

@@ -1,0 +1,55 @@
+{"level":"info","time":"04-08-2024 à 13:27:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/repo/authRepo.go:27","message":"<nil>"}
+{"level":"info","time":"04-08-2024 à 13:29:16","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: <nil>"}
+{"level":"info","time":"04-08-2024 à 13:29:16","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/repo/authRepo.go:27","message":"<nil>"}
+{"level":"info","time":"04-08-2024 à 13:29:58","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: <nil>"}
+{"level":"info","time":"04-08-2024 à 13:29:58","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:38","message":"0"}
+{"level":"info","time":"04-08-2024 à 13:29:58","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/repo/authRepo.go:27","message":"<nil>"}
+{"level":"info","time":"04-08-2024 à 13:31:15","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: &{0xc0004fe6c0 <nil> 0 0xc000605a40 1}"}
+{"level":"info","time":"04-08-2024 à 13:31:15","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:38","message":"2"}
+{"level":"info","time":"04-08-2024 à 13:31:15","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: secondary, Value: &{0xc0004fe6c0 <nil> 0 0xc000605a40 1}"}
+{"level":"info","time":"04-08-2024 à 13:31:15","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: primary, Value: &{0xc0001985a0 <nil> 0 0xc000584a80 1}"}
+{"level":"info","time":"04-08-2024 à 13:31:15","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/repo/authRepo.go:27","message":"&{0xc0004fe6c0 <nil> 0 0xc000605a40 1}"}
+{"level":"info","time":"04-08-2024 à 14:04:04","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"info","time":"04-08-2024 à 14:04:04","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:38","message":"2"}
+{"level":"info","time":"04-08-2024 à 14:04:04","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: primary, Value: &{0xc00017a6c0 <nil> 0 0xc0005016c0 1}"}
+{"level":"info","time":"04-08-2024 à 14:04:04","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: secondary, Value: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:09","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:09","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:38","message":"2"}
+{"level":"info","time":"04-08-2024 à 14:13:09","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: primary, Value: &{0xc00017a6c0 <nil> 0 0xc0005016c0 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:09","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: secondary, Value: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:23","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:37","message":"Login request: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:23","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:38","message":"2"}
+{"level":"info","time":"04-08-2024 à 14:13:23","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: primary, Value: &{0xc00017a6c0 <nil> 0 0xc0005016c0 1}"}
+{"level":"info","time":"04-08-2024 à 14:13:23","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:40","message":"Key: secondary, Value: &{0xc0002e26c0 <nil> 0 0xc000604380 1}"}
+{"level":"debug","time":"04-08-2024 à 14:22:01","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:66","message":"Erreur avec votre authentication. merci de réessayer."}
+{"level":"debug","time":"04-08-2024 à 14:23:38","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/handler/authenticationHandler.go:66","message":"Erreur avec votre authentication. merci de réessayer."}
+{"level":"info","time":"04-08-2024 à 17:14:30","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:46","message":"accesses: []"}
+{"level":"error","error":"failed to parse target from path: /apps/my-stock/test","time":"04-08-2024 à 17:14:30","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"failed to parse target from path: /apps/my-stock/test"}
+{"level":"info","time":"04-08-2024 à 17:15:00","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:46","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:15:00","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"info","time":"04-08-2024 à 17:16:12","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:46","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:16:12","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"info","time":"04-08-2024 à 17:16:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: []"}
+{"level":"info","time":"04-08-2024 à 17:16:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:47","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:16:51","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"info","time":"04-08-2024 à 17:17:07","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: []"}
+{"level":"info","time":"04-08-2024 à 17:17:07","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:47","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:17:07","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"info","time":"04-08-2024 à 17:17:13","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: []"}
+{"level":"info","time":"04-08-2024 à 17:17:13","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:47","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:17:13","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"error","time":"04-08-2024 à 17:17:52","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/middleware/middleware.go:55","message":"Claims: "}
+{"level":"info","time":"04-08-2024 à 17:17:52","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: []"}
+{"level":"info","time":"04-08-2024 à 17:17:52","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:47","message":"accesses: []"}
+{"level":"error","error":"Vous n'avez pas la license nécessaire pour aller ici.","time":"04-08-2024 à 17:17:52","caller":"C:/Program Files/Go/src/runtime/asm_amd64.s:1695","message":"Vous n'avez pas la license nécessaire pour aller ici."}
+{"level":"error","time":"04-08-2024 à 17:19:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/middleware/middleware.go:55","message":"Claims: "}
+{"level":"info","time":"04-08-2024 à 17:19:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: [0]"}
+{"level":"info","time":"04-08-2024 à 17:19:51","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:47","message":"accesses: [0]"}
+{"level":"error","time":"04-08-2024 à 19:52:07","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/middleware/middleware.go:55","message":"Claims: "}
+{"level":"info","time":"04-08-2024 à 19:52:07","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: [0]"}
+{"level":"info","time":"04-08-2024 à 19:52:07","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"accesses: [0]"}
+{"level":"error","time":"04-08-2024 à 19:53:21","caller":"C:/dev/Taff/kroely/diy/services/gateway/api/middleware/middleware.go:55","message":"Claims: "}
+{"level":"info","time":"04-08-2024 à 19:53:21","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:18","message":"accessParam: [0]"}
+{"level":"info","time":"04-08-2024 à 19:53:21","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"accesses: [0]"}
+{"level":"debug","time":"04-08-2024 à 19:54:54","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: [apps my-stock api v1 car all]"}
+{"level":"debug","time":"04-08-2024 à 19:55:28","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/all"}
