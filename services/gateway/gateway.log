@@ -53,3 +53,14 @@
 {"level":"info","time":"04-08-2024 à 19:53:21","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"accesses: [0]"}
 {"level":"debug","time":"04-08-2024 à 19:54:54","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: [apps my-stock api v1 car all]"}
 {"level":"debug","time":"04-08-2024 à 19:55:28","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/all"}
+{"level":"debug","time":"04-08-2024 à 19:55:47","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/all"}
+{"level":"debug","time":"04-08-2024 à 19:56:12","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/all"}
+{"level":"debug","time":"04-08-2024 à 19:57:26","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/all"}
+{"level":"debug","time":"04-08-2024 à 19:57:29","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 19:57:30","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 19:57:34","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 19:57:40","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 19:57:41","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 19:59:29","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 20:04:40","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}
+{"level":"debug","time":"04-08-2024 à 20:04:53","caller":"C:/dev/Taff/kroely/diy/services/gateway/proxy/proxy.go:52","message":"parts: /apps/my-stock/api/v1/car/ez"}

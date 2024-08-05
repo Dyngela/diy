@@ -1,5 +1,5 @@
 [[databases]]
-uuid = "primary"
+uuid = "7b961b3b-4cf5-40fc-9c8e-d7237def1a3a"
 host = "localhost"
 port = 5432
 user = "postgres"
@@ -7,7 +7,7 @@ password = "postgres"
 dbname = "primary_db"
 
 [[databases]]
-uuid = "secondary"
+uuid = "830e70ce-d25d-4f16-a6e6-5e5e88d4d30e"
 host = "localhost"
 port = 5432
 user = "postgres"

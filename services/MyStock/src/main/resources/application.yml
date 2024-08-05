@@ -16,4 +16,4 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASS}
 
-defaultTenant: secondary
+defaultTenant: 830e70ce-d25d-4f16-a6e6-5e5e88d4d30e
