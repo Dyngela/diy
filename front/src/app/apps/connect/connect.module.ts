@@ -26,5 +26,6 @@ import {MessageService} from "primeng/api";
     PasswordModule,
     ToastModule,
   ],
+
 })
 export class ConnectModule { }

@@ -24,7 +24,7 @@ func main() {
 
 	handler.AuthHandlerRoutes(router.Group("/connect"))
 
-	router.Use(middleware.CheckJWT()).Any("apps/*path", proxy.ReverseProxy)
+	router.Use(middleware.CheckJWT()).Any("internal/*path", proxy.ReverseProxy)
 	if err := router.Run(fmt.Sprintf(":%s", config.Config.Port)); err != nil {
 		panic(err)
 	}

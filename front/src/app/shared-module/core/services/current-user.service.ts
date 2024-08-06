@@ -11,7 +11,25 @@ import {CurrentUser} from "../DTO/currentUser";
 export class CurrentUserService {
   currentUser$ = new BehaviorSubject<CurrentUser | undefined>(undefined);
 
-  constructor(private api: ApiService, private cookieService: CookieService) { }
+  constructor(private api: ApiService, private cookieService: CookieService) {
+    this.initCurrentUser()
+  }
+
+  private initCurrentUser() {
+    if (this.getBearer() === "") {
+      this.currentUser$.next(undefined)
+      return
+    }
+    const decodedJWT = JSON.parse(window.atob(this.getBearer().split('.')[1]))
+    const currentUser: CurrentUser = {
+      email: decodedJWT.email,
+      access: decodedJWT.access,
+      tenant: decodedJWT.tenant,
+      expireAt: decodedJWT.expireAt,
+      roles: decodedJWT.roles
+    };
+    this.currentUser$.next(currentUser)
+  }
 
   setCurrentUser(needRefresh: boolean = true) {
     let jwt = new JWT()

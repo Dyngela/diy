@@ -1,6 +1,9 @@
 package kroely.diy.mystock.api.car;
 
+import jakarta.validation.Valid;
+import kroely.diy.mystock.api.car.request.CreateSingleVehicle;
 import kroely.diy.mystock.api.car.response.FindAllCar;
+import kroely.diy.mystock.common.GenericApiResponse;
 import kroely.diy.mystock.security.Roles;
 import kroely.diy.mystock.security.RolesAllowed;
 import lombok.AccessLevel;
@@ -12,9 +15,7 @@ import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ import java.util.List;
 @Slf4j
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RestController
-@RequestMapping("apps/my-stock/api/v1/car")
+@RequestMapping("internal/my-stock/api/v1/car")
 public class CarHandler {
 
     CarService carService;
@@ -33,10 +34,9 @@ public class CarHandler {
         return ResponseEntity.ok(carService.findAll());
     }
 
-    @GetMapping("/ez")
-    public ResponseEntity<List<FindAllCar>> ez() {
-        log.warn("Getting all cars");
-
-        return ResponseEntity.ok(carService.findAll());
+    @PostMapping("/add")
+    public ResponseEntity<GenericApiResponse<Long>> addCar(@Valid @RequestBody CreateSingleVehicle car) {
+        return ResponseEntity.ok(carService.createSingleCar(car));
     }
+
 }

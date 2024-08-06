@@ -18,10 +18,10 @@ export class AppComponent implements OnInit {
   router = inject(Router)
 
   ngOnInit(): void {
+    this.currentUserService.setCurrentUser();
     this.currentUserService.currentUser$.subscribe((user) => {
       this.currentUser = user;
       if (!user) {
-        console.log("User is not logged in")
         this.router.navigate(['connect/login'])
       }
     });

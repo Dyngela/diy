@@ -49,13 +49,10 @@ func ReverseProxy(ctx *gin.Context) {
 
 func Target(path string, accesses []entity.AccessType) (string, error) {
 	parts := strings.Split(strings.TrimPrefix(path, "/"), "/")
-	config.Logger.Debug().Msg(fmt.Sprintf("parts: %v", path))
 	if len(parts) <= 1 {
 		return "", fmt.Errorf("failed to parse target from path: %s", path)
 	}
-	// TODO add each port of each service
 	var targetAddr string
-	// TODO put 0 in prod and 2 in dev -> config that shit
 	switch parts[1] {
 	case "my-stock":
 		{

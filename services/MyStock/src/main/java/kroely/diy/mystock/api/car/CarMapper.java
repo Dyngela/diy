@@ -1,5 +1,6 @@
 package kroely.diy.mystock.api.car;
 
+import kroely.diy.mystock.api.car.request.CreateSingleVehicle;
 import kroely.diy.mystock.api.car.response.FindAllCar;
 import kroely.diy.mystock.mapper_utils.CycleAvoidingMappingContext;
 import org.mapstruct.*;
@@ -10,4 +11,5 @@ import java.util.List;
         typeConversionPolicy = ReportingPolicy.ERROR, componentModel = MappingConstants.ComponentModel.SPRING)
 public interface CarMapper {
     List<FindAllCar> entitiesToDtos(List<CarEntity> entities, @Context CycleAvoidingMappingContext context);
+    CarEntity dtoToEntity(CreateSingleVehicle car, CycleAvoidingMappingContext cycleAvoidingMappingContext);
 }

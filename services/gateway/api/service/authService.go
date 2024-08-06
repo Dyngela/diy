@@ -61,10 +61,13 @@ func (a authService) GenerateRefreshToken(ctx *gin.Context, input request.JWT) (
 	if len(input.AccessToken) < 10 {
 		return "", errors.New("Erreur avec votre authentication. merci de réessayer.")
 	}
+	a.logger.Error().Msgf("%v", input.AccessToken)
 	token, err := jwt.ParseWithClaims(input.AccessToken, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte(config.Config.Secret), nil
 	}, jwt.WithLeeway(5*time.Second))
 	if err != nil || !token.Valid {
+		a.logger.Error().Msgf("%v", err)
+		a.logger.Error().Msgf("%v", token.Valid)
 		return "", errors.New("Vous n'êtes pas connecté.")
 	}
 

@@ -14,7 +14,7 @@ func CORS() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding")
+		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, Authorization, accept, Origin, enctype")
 		c.Writer.Header().Set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS")
 		if c.Request.Method == "OPTIONS" {
 			c.AbortWithStatus(204)
@@ -31,6 +31,7 @@ func CheckJWT() gin.HandlerFunc {
 
 	return func(ctx *gin.Context) {
 		if len(ctx.GetHeader("Authorization")) < 10 {
+			config.Logger.Debug().Msgf("aze: %v", ctx.GetHeader("Authorization"))
 			ctx.JSON(http.StatusUnauthorized, types.APIError{Message: "Vous n'êtes pas connecté."})
 			ctx.Abort()
 			return
@@ -42,6 +43,8 @@ func CheckJWT() gin.HandlerFunc {
 		}, jwt.WithLeeway(5*time.Second))
 
 		if err != nil || !token.Valid {
+			config.Logger.Error().Msgf("%v", err)
+			config.Logger.Error().Msgf("%v", token.Valid)
 			ctx.JSON(http.StatusUnauthorized, types.APIError{Message: "Vous n'êtes pas connecté."})
 			ctx.Abort()
 			return

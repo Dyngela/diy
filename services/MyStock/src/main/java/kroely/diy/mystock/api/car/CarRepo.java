@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface CarRepo extends JpaRepository<CarEntity, Long> {
-    List<CarEntity> findAll();
+    List<CarEntity> findAllByDeletedAtIsNull();
 }

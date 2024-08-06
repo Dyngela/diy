@@ -18,10 +18,7 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr' },
-
-    {
-      provide: MessageService,
-    },
+    {provide: MessageService,},
   ],
 })
 export class SharedModuleModule { }

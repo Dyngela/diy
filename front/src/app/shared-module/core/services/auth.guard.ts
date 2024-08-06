@@ -11,6 +11,7 @@ export const isConnectedGuard: CanActivateFn = () => {
     filter((currentUser) => currentUser !== undefined),
     map((currentUser) => {
       if (!currentUser) {
+        console.log("je suis trop con")
         router.navigateByUrl('/connect/login');
         return false;
       }
