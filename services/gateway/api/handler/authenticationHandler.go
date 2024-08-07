@@ -2,13 +2,15 @@ package handler
 
 import (
 	"gateway/api/dto/request"
-	"gateway/api/middleware"
 	"gateway/api/service"
 	"gateway/config"
 	"gateway/types"
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v5"
 	"github.com/rs/zerolog"
+	"github.com/spf13/cast"
 	"net/http"
+	"time"
 )
 
 type authHandler struct {
@@ -26,7 +28,7 @@ func newAuthHandler() *authHandler {
 func AuthHandlerRoutes(router *gin.RouterGroup) {
 	h := newAuthHandler()
 	router.POST("/login", h.Login)
-	router.Use(middleware.CheckJWT()).POST("/refresh", h.refreshToken)
+	router.POST("/refresh", h.refreshToken)
 }
 
 func (h *authHandler) Login(ctx *gin.Context) {
@@ -62,7 +64,20 @@ func (h *authHandler) refreshToken(ctx *gin.Context) {
 		return
 	}
 	h.logger.Info().Msgf("input: %v", input)
-	conn, exist := config.DbConnections[ctx.MustGet("tenant").(string)]
+	// get refresh token and extract tenant claim from it
+	claims := jwt.MapClaims{}
+	token, err := jwt.ParseWithClaims(input.RefreshToken, claims, func(token *jwt.Token) (interface{}, error) {
+		return []byte(config.Config.Secret), nil
+	}, jwt.WithLeeway(5*time.Second))
+	if err != nil || !token.Valid {
+		config.Logger.Error().Msgf("%v", err)
+		config.Logger.Error().Msgf("%v", token.Valid)
+		ctx.JSON(http.StatusUnauthorized, types.APIError{Message: "Vous n'êtes plus connecté. Votre session a pris fin. Merci de vous reconnecter"})
+		ctx.Abort()
+		return
+	}
+
+	conn, exist := config.DbConnections[cast.ToString(claims["tenant"])]
 	if !exist {
 		ctx.JSON(400, types.APIError{Message: "Societe not found"})
 		return

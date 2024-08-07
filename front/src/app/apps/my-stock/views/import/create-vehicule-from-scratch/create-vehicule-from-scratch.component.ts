@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, FormArray, Validators, ReactiveFormsModule} from '@angular/forms';
 import {InputTextModule} from "primeng/inputtext";
-import {NgForOf} from "@angular/common";
+import {KeyValuePipe, NgClass, NgForOf, NgIf} from "@angular/common";
+import {DropdownModule} from "primeng/dropdown";
+import {StatutStockVehicule} from "../../../../../shared-module/core/enums/statutStockVehicule";
+import {StyleClassModule} from "primeng/styleclass";
+
 
 @Component({
   selector: 'app-create-vehicule-from-scratch',
@@ -9,82 +13,41 @@ import {NgForOf} from "@angular/common";
   imports: [
     ReactiveFormsModule,
     InputTextModule,
-    NgForOf
+    NgForOf,
+    NgIf,
+    NgClass,
+    DropdownModule,
+    KeyValuePipe,
+    StyleClassModule,
   ],
   templateUrl: './create-vehicule-from-scratch.component.html',
   styleUrl: './create-vehicule-from-scratch.component.css'
 })
 export class CreateVehiculeFromScratchComponent {
   vehiculeForm: FormGroup;
+  formSubmitted = false;
+  statutStockVehicule = StatutStockVehicule;
 
   constructor(private fb: FormBuilder) {
     this.vehiculeForm = this.fb.group({
-      numeroPolice: ['', [Validators.required]],
-      immat: ['', [Validators.required]],
-      chassis: ['', [Validators.required]],
-      annee: [null, []],
-      date1Mec: [null, []],
-      marque: ['', []],
-      modele: ['', []],
-      energie: ['', []],
-      puissanceFiscale: ['', []],
-      puissanceReelle: ['', []],
-      nbPlaces: ['', []],
-      nbPortes: ['', []],
-      kilometrage: [null, []],
-      couleurInterieur: ['', []],
-      boite: ['', []],
-      nbRapports: ['', []],
-      prixVenteTTC: [null, []],
-      TVA: [null, []],
-      premiereMain: [false, []],
-      garantie: ['', []],
-      categorie: ['', []],
-      co2: ['', []],
-      ptac: ['', []],
-      longueur: [null, []],
-      largeur: [null, []],
-      empattement: ['', []],
-      hauteur: ['', []],
-      volume: [null, []],
-      serie: ['', []],
-      carrosserie: ['', []],
-      genre: ['', []],
-      dureeGarantie: ['', []],
-      totalFraisEstimes: [null, []],
-      totalFraisReels: [null, []],
-      codeGarantie: ['', []],
-      cylindree: ['', []],
-      origine: ['', []],
-      malus: [null, []],
-      critair: ['', []],
-      prixMarche: ['', []],
-      version: ['', []],
-      couple: ['', []],
-      nombreCylindres: ['', []],
-      propulsion: ['', []],
-      vitesseMax: ['', []],
-      acceleration: ['', []],
-      volumeMax: [null, []],
-      poidsTotal: [null, []],
-      poidsVide: [null, []],
-      capaciteReservoir: [null, []],
-      nbAirbag: [null, []],
-      couleurExterieur: ['', []],
-      sellerie: ['', []],
-      consoTrafficMixte: [null, []],
-      consoTrafficUrbain: [null, []],
-      consoTrafficExtraUrbain: [null, []],
-      dateCarteGrise: [null, []],
-      dateDernierCT: [null, []],
-      options: this.fb.array([]),
-      photos: this.fb.array([]),
-      avaries: this.fb.array([])
+      statut: ['', [Validators.required]],
+      dateEntree: ['', [Validators.required]],
+      origine: ['', [Validators.required]],
+      immatriculation: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(7)]],
+      departement: ['', [Validators.required]],
+      vin: ['', [Validators.required]],
+      dateMiseEnCirculation: ['', [Validators.required]],
+      marque: ['', [Validators.required]],
+      modele: ['', [Validators.required]],
+      version: ['', [Validators.required]],
     });
   }
 
   onSubmit() {
-
+    this.formSubmitted = true;
+    if (this.vehiculeForm.valid) {
+      console.log(this.vehiculeForm.value);
+    }
   }
 
   addOption() {

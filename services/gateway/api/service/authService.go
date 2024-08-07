@@ -45,7 +45,7 @@ func (a authService) Login(ctx *gin.Context, email string, password string, uuid
 		return "", "", errors.New("Erreur lors de la création du token")
 	}
 
-	refreshToken, _ := common.CreateRefreshToken()
+	refreshToken, _ := common.CreateRefreshToken(uuid)
 	user.RefreshToken = refreshToken
 	user.RefreshTokenExpiration = time.Now().Add(time.Hour * 24 * 7 * 30)
 	err = a.authRepo.UpdateUser(ctx, user)

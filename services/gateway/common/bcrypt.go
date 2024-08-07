@@ -46,10 +46,11 @@ func CreateJwtToken(user entity.Users, tenant string) (string, error) {
 	return tokenString, nil
 }
 
-func CreateRefreshToken() (string, error) {
+func CreateRefreshToken(tenant string) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256,
 		jwt.MapClaims{
 			"expireAt": time.Now().Add(time.Hour * 24 * 7 * 30),
+			"tenant":   tenant,
 		})
 
 	tokenString, err := token.SignedString([]byte(config.Config.Secret))

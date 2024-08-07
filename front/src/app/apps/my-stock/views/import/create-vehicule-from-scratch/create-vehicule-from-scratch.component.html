@@ -1,386 +1,63 @@
-<form [formGroup]="vehiculeForm" (ngSubmit)="onSubmit()">
-  <div class="flex flex-column gap-2">
-    <label for="numeroPolice">Numero Police</label>
-    <input pInputText id="numeroPolice" formControlName="numeroPolice" />
-  </div>
+<form [formGroup]="vehiculeForm" (ngSubmit)="onSubmit()" >
 
-  <div class="flex flex-column gap-2">
-    <label for="immat">Immat</label>
-    <input pInputText id="immat" formControlName="immat" />
-    <small id="immat-help">Enter the immat.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="chassis">Chassis</label>
-    <input pInputText id="chassis" formControlName="chassis" />
-    <small id="chassis-help">Enter the chassis number.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="annee">Annee</label>
-    <input pInputText id="annee" formControlName="annee" />
-    <small id="annee-help">Enter the year.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="date1Mec">Date 1Mec</label>
-    <input pInputText id="date1Mec" formControlName="date1Mec" />
-    <small id="date1Mec-help">Enter the date 1Mec.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="marque">Marque</label>
-    <input pInputText id="marque" formControlName="marque" />
-    <small id="marque-help">Enter the marque.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="modele">Modele</label>
-    <input pInputText id="modele" formControlName="modele" />
-    <small id="modele-help">Enter the modele.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="energie">Energie</label>
-    <input pInputText id="energie" formControlName="energie" />
-    <small id="energie-help">Enter the energie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="puissanceFiscale">Puissance Fiscale</label>
-    <input pInputText id="puissanceFiscale" formControlName="puissanceFiscale" />
-    <small id="puissanceFiscale-help">Enter the puissance fiscale.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="puissanceReelle">Puissance Reelle</label>
-    <input pInputText id="puissanceReelle" formControlName="puissanceReelle" />
-    <small id="puissanceReelle-help">Enter the puissance reelle.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="nbPlaces">Nombre de Places</label>
-    <input pInputText id="nbPlaces" formControlName="nbPlaces" />
-    <small id="nbPlaces-help">Enter the number of places.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="nbPortes">Nombre de Portes</label>
-    <input pInputText id="nbPortes" formControlName="nbPortes" />
-    <small id="nbPortes-help">Enter the number of portes.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="kilometrage">Kilometrage</label>
-    <input pInputText id="kilometrage" formControlName="kilometrage" />
-    <small id="kilometrage-help">Enter the kilometrage.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="couleurInterieur">Couleur Interieur</label>
-    <input pInputText id="couleurInterieur" formControlName="couleurInterieur" />
-    <small id="couleurInterieur-help">Enter the couleur interieur.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="boite">Boite</label>
-    <input pInputText id="boite" formControlName="boite" />
-    <small id="boite-help">Enter the boite.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="nbRapports">Nombre de Rapports</label>
-    <input pInputText id="nbRapports" formControlName="nbRapports" />
-    <small id="nbRapports-help">Enter the nombre de rapports.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="prixVenteTTC">Prix Vente TTC</label>
-    <input pInputText id="prixVenteTTC" formControlName="prixVenteTTC" />
-    <small id="prixVenteTTC-help">Enter the prix vente TTC.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="TVA">TVA</label>
-    <input pInputText id="TVA" formControlName="TVA" />
-    <small id="TVA-help">Enter the TVA.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="premiereMain">Premiere Main</label>
-    <input type="checkbox" id="premiereMain" formControlName="premiereMain" />
-    <small id="premiereMain-help">Is it premiere main?</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="garantie">Garantie</label>
-    <input pInputText id="garantie" formControlName="garantie" />
-    <small id="garantie-help">Enter the garantie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="categorie">Categorie</label>
-    <input pInputText id="categorie" formControlName="categorie" />
-    <small id="categorie-help">Enter the categorie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="co2">CO2</label>
-    <input pInputText id="co2" formControlName="co2" />
-    <small id="co2-help">Enter the CO2.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="ptac">PTAC</label>
-    <input pInputText id="ptac" formControlName="ptac" />
-    <small id="ptac-help">Enter the PTAC.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="longueur">Longueur</label>
-    <input pInputText id="longueur" formControlName="longueur" />
-    <small id="longueur-help">Enter the longueur.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="largeur">Largeur</label>
-    <input pInputText id="largeur" formControlName="largeur" />
-    <small id="largeur-help">Enter the largeur.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="empattement">Empattement</label>
-    <input pInputText id="empattement" formControlName="empattement" />
-    <small id="empattement-help">Enter the empattement.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="hauteur">Hauteur</label>
-    <input pInputText id="hauteur" formControlName="hauteur" />
-    <small id="hauteur-help">Enter the hauteur.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="volume">Volume</label>
-    <input pInputText id="volume" formControlName="volume" />
-    <small id="volume-help">Enter the volume.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="serie">Serie</label>
-    <input pInputText id="serie" formControlName="serie" />
-    <small id="serie-help">Enter the serie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="carrosserie">Carrosserie</label>
-    <input pInputText id="carrosserie" formControlName="carrosserie" />
-    <small id="carrosserie-help">Enter the carrosserie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="genre">Genre</label>
-    <input pInputText id="genre" formControlName="genre" />
-    <small id="genre-help">Enter the genre.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="dureeGarantie">Duree Garantie</label>
-    <input pInputText id="dureeGarantie" formControlName="dureeGarantie" />
-    <small id="dureeGarantie-help">Enter the duree garantie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="totalFraisEstimes">Total Frais Estimes</label>
-    <input pInputText id="totalFraisEstimes" formControlName="totalFraisEstimes" />
-    <small id="totalFraisEstimes-help">Enter the total frais estimes.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="totalFraisReels">Total Frais Reels</label>
-    <input pInputText id="totalFraisReels" formControlName="totalFraisReels" />
-    <small id="totalFraisReels-help">Enter the total frais reels.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="codeGarantie">Code Garantie</label>
-    <input pInputText id="codeGarantie" formControlName="codeGarantie" />
-    <small id="codeGarantie-help">Enter the code garantie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="cylindree">Cylindree</label>
-    <input pInputText id="cylindree" formControlName="cylindree" />
-    <small id="cylindree-help">Enter the cylindree.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="origine">Origine</label>
-    <input pInputText id="origine" formControlName="origine" />
-    <small id="origine-help">Enter the origine.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="malus">Malus</label>
-    <input pInputText id="malus" formControlName="malus" />
-    <small id="malus-help">Enter the malus.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="critair">Critair</label>
-    <input pInputText id="critair" formControlName="critair" />
-    <small id="critair-help">Enter the critair.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="prixMarche">Prix Marche</label>
-    <input pInputText id="prixMarche" formControlName="prixMarche" />
-    <small id="prixMarche-help">Enter the prix marche.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="version">Version</label>
-    <input pInputText id="version" formControlName="version" />
-    <small id="version-help">Enter the version.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="couple">Couple</label>
-    <input pInputText id="couple" formControlName="couple" />
-    <small id="couple-help">Enter the couple.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="nombreCylindres">Nombre de Cylindres</label>
-    <input pInputText id="nombreCylindres" formControlName="nombreCylindres" />
-    <small id="nombreCylindres-help">Enter the nombre de cylindres.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="propulsion">Propulsion</label>
-    <input pInputText id="propulsion" formControlName="propulsion" />
-    <small id="propulsion-help">Enter the propulsion.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="vitesseMax">Vitesse Max</label>
-    <input pInputText id="vitesseMax" formControlName="vitesseMax" />
-    <small id="vitesseMax-help">Enter the vitesse max.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="acceleration">Acceleration</label>
-    <input pInputText id="acceleration" formControlName="acceleration" />
-    <small id="acceleration-help">Enter the acceleration.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="volumeMax">Volume Max</label>
-    <input pInputText id="volumeMax" formControlName="volumeMax" />
-    <small id="volumeMax-help">Enter the volume max.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="poidsTotal">Poids Total</label>
-    <input pInputText id="poidsTotal" formControlName="poidsTotal" />
-    <small id="poidsTotal-help">Enter the poids total.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="poidsVide">Poids Vide</label>
-    <input pInputText id="poidsVide" formControlName="poidsVide" />
-    <small id="poidsVide-help">Enter the poids vide.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="capaciteReservoir">Capacite Reservoir</label>
-    <input pInputText id="capaciteReservoir" formControlName="capaciteReservoir" />
-    <small id="capaciteReservoir-help">Enter the capacite reservoir.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="nbAirbag">Nombre d'Airbags</label>
-    <input pInputText id="nbAirbag" formControlName="nbAirbag" />
-    <small id="nbAirbag-help">Enter the nombre d'airbags.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="couleurExterieur">Couleur Exterieur</label>
-    <input pInputText id="couleurExterieur" formControlName="couleurExterieur" />
-    <small id="couleurExterieur-help">Enter the couleur exterieur.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="sellerie">Sellerie</label>
-    <input pInputText id="sellerie" formControlName="sellerie" />
-    <small id="sellerie-help">Enter the sellerie.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="consoTrafficMixte">Consommation Traffic Mixte</label>
-    <input pInputText id="consoTrafficMixte" formControlName="consoTrafficMixte" />
-    <small id="consoTrafficMixte-help">Enter the consommation traffic mixte.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="consoTrafficUrbain">Consommation Traffic Urbain</label>
-    <input pInputText id="consoTrafficUrbain" formControlName="consoTrafficUrbain" />
-    <small id="consoTrafficUrbain-help">Enter the consommation traffic urbain.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="consoTrafficExtraUrbain">Consommation Traffic Extra Urbain</label>
-    <input pInputText id="consoTrafficExtraUrbain" formControlName="consoTrafficExtraUrbain" />
-    <small id="consoTrafficExtraUrbain-help">Enter the consommation traffic extra urbain.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="dateCarteGrise">Date Carte Grise</label>
-    <input pInputText id="dateCarteGrise" formControlName="dateCarteGrise" />
-    <small id="dateCarteGrise-help">Enter the date carte grise.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label for="dateDernierCT">Date Dernier CT</label>
-    <input pInputText id="dateDernierCT" formControlName="dateDernierCT" />
-    <small id="dateDernierCT-help">Enter the date dernier CT.</small>
-  </div>
-
-  <div class="flex flex-column gap-2">
-    <label>Options</label>
-    <div formArrayName="options">
-      <div *ngFor="let option of options.controls; let i = index" [formGroupName]="i">
-        <input pInputText formControlName="name" />
-<!--        <button type="button" (click)="removeOption(i)">Remove</button>-->
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Numéro de police</label>
+      <input type="text"
+             [ngClass]="{'!border-red-500': vehiculeForm.get('immatriculation')?.invalid && (vehiculeForm.get('immatriculation')?.touched || formSubmitted)}"
+             class="my-input"
+             placeholder="John"
+             [formControlName]="'immatriculation'"/>
+      <div *ngIf="(vehiculeForm.get('immatriculation')?.invalid && (vehiculeForm.get('immatriculation')?.touched || formSubmitted))" >
+        <p *ngIf="vehiculeForm.get('immatriculation')?.errors?.['required']" class="text-red-500 text-xs italic ms-3 mt-0.5">L'immatriculation du véhicule est requise.</p>
+        <p *ngIf="vehiculeForm.get('immatriculation')?.errors?.['minlength']" class="text-red-500 text-xs italic ms-3 mt-0.5">L'immatriculation du véhicule doit faire au moins 5 caractères.</p>
+        <p *ngIf="vehiculeForm.get('immatriculation')?.errors?.['maxlength']" class="text-red-500 text-xs italic ms-3 mt-0.5">L'immatriculation du véhicule doit faire au maximum 7 caractères.</p>
       </div>
-      <button type="button" (click)="addOption()">Add Option</button>
+    </div>
+    <div>
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Statut véhicule</label>
+      <p-dropdown [options]="statutStockVehicule | keyvalue"
+                  placeholder="Selectionnez le statut de votre véhicule"
+                  optionLabel="value"
+                  [ngClass]="{'ng-dirty ng-invalid': vehiculeForm.get('statut')?.invalid && (vehiculeForm.get('statut')?.touched || formSubmitted)}"
+                  [showClear]="true"
+                  formControlName="statut"></p-dropdown>
+    </div>
+    <div>
+      <label for="company" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+      <input type="text" id="company" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Flowbite" required />
+    </div>
+    <div>
+      <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+      <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+    </div>
+    <div>
+      <label for="website" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website URL</label>
+      <input type="url" id="website" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="flowbite.com" required />
+    </div>
+    <div>
+      <label for="visitors" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unique visitors (per month)</label>
+      <input type="number" id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     </div>
   </div>
-
-  <div class="flex flex-column gap-2">
-    <label>Photos</label>
-    <div formArrayName="photos">
-      <div *ngFor="let photo of photos.controls; let i = index" [formGroupName]="i">
-        <input pInputText formControlName="path" />
-        <input pInputText formControlName="description" />
-<!--        <button type="button" (click)="removePhoto(i)">Remove</button>-->
-      </div>
-      <button type="button" (click)="addPhoto()">Add Photo</button>
-    </div>
+  <div class="mb-6">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required />
   </div>
-
-  <div class="flex flex-column gap-2">
-    <label>Avaries</label>
-    <div formArrayName="avaries">
-      <div *ngFor="let avarie of avaries.controls; let i = index" [formGroupName]="i">
-        <input pInputText formControlName="description" />
-        <input pInputText formControlName="price" />
-        <input pInputText formControlName="path" />
-<!--        <button type="button" (click)="removeAvarie(i)">Remove</button>-->
-      </div>
-      <button type="button" (click)="addAvarie()">Add Avarie</button>
-    </div>
+  <div class="mb-6">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
   </div>
+  <div class="mb-6">
+    <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+    <input type="password" id="confirm_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+  </div>
+  <div class="flex items-start mb-6">
+    <div class="flex items-center h-5">
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+    </div>
+    <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 
-  <button type="submit">Submit</button>
 </form>
