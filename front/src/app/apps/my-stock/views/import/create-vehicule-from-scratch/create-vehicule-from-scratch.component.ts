@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, FormArray, Validators, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, FormArray, Validators, ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {InputTextModule} from "primeng/inputtext";
 import {KeyValuePipe, NgClass, NgForOf, NgIf} from "@angular/common";
 import {DropdownModule} from "primeng/dropdown";
 import {StatutStockVehicule} from "../../../../../shared-module/core/enums/statutStockVehicule";
-import {StyleClassModule} from "primeng/styleclass";
-
 
 @Component({
   selector: 'app-create-vehicule-from-scratch',
@@ -18,7 +16,7 @@ import {StyleClassModule} from "primeng/styleclass";
     NgClass,
     DropdownModule,
     KeyValuePipe,
-    StyleClassModule,
+    FormsModule,
   ],
   templateUrl: './create-vehicule-from-scratch.component.html',
   styleUrl: './create-vehicule-from-scratch.component.css'

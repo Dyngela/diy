@@ -1,5 +1,6 @@
 @import "ngprime-custom-theme.css";
 @import "primeng/resources/primeng.css";
+/*@import "primeng/resources/themes/lara-light-blue/theme.css";*/
 
 @tailwind base;
 @tailwind components;

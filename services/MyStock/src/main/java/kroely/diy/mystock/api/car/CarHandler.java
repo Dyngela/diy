@@ -34,7 +34,7 @@ public class CarHandler {
         return ResponseEntity.ok(carService.findAll());
     }
 
-    @PostMapping("/add")
+    @PostMapping("/")
     public ResponseEntity<GenericApiResponse<Long>> addCar(@Valid @RequestBody CreateSingleVehicle car) {
         return ResponseEntity.ok(carService.createSingleCar(car));
     }
